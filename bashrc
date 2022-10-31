@@ -614,4 +614,4 @@ alias k='kubectl'
 
 export PATH="$HOME/.tfenv/bin:$PATH"
 
-termwatch(){ delay="$1"; shift; clear; "$@"; while sleep "$delay"; do clear; "$@"; done; }
+termwatch(){ delay="$1"; shift; clear; curl -s "https://wttr.in/$@"; while sleep "$delay"; do clear; curl -s "https://wttr.in/$@"; done; }
